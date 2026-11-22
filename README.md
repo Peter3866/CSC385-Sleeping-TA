@@ -1,7 +1,7 @@
-# CSC 385 — Sleeping Teaching Assistant Project
+# CSC 385  Sleeping Teaching Assistant Project
 
 **Students:** Ralph Petit and Kyle Fish  
-**Course:** CSC 385 — Operating Systems  
+**Course:** CSC 385 Operating Systems  
 **Language:** C  
 **Environment:** Ubuntu Linux
 
@@ -37,13 +37,13 @@ int front = 0, rear = 0, count = 0;
 ```
 The program uses a circular FIFO queue to manage students waiting for help. Students are served in the order they enter the queue.
 
-### Teaching Assistant Function — `ta()`
+### Teaching Assistant Function  `ta()`
 The TA waits for students using `sem_wait()`. When a student arrives, the TA selects that student, provides assistance, and signals completion. The TA exits when all student threads finish and no requests remain.
 
-### Student Function — `student()`
+### Student Function  `student()`
 Each student attempts to receive help three times. If the TA is available, the student requests help directly. Otherwise, the student waits in an available chair. If all chairs are occupied, the student skips that attempt.
 
-### Main Function — `main()`
+### Main Function  `main()`
 The main function initializes the semaphores, creates one TA thread and five student threads, waits for the threads to finish, and releases the synchronization resources.
 
 ## 3. Compile and Run
@@ -77,4 +77,4 @@ This project helped us understand how operating systems manage concurrent thread
 ---
 
 **Students:** Ralph Petit and Kyle Fish  
-**Course:** CSC 385 — Operating Systems
+**Course:** CSC 385 Operating Systems
